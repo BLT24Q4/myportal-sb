@@ -2,6 +2,7 @@ package himedia.myportal;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import himedia.myportal.interceptors.AuthInterceptor;
@@ -14,6 +15,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	//	인터셉터 설정
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
+		//	LogoutInterceptor
 		registry.addInterceptor(new LogoutInterceptor())
 			.addPathPatterns("/users/logout");
 		
@@ -27,4 +29,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
 					"/board/list");
 	}
 
+	//	정적 자원 매핑
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/upload-images/**")
+			.addResourceLocations("file:/c:/uploads/");
+	}
+
+	
 }
