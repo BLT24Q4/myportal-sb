@@ -11,6 +11,7 @@ import himedia.myportal.exceptions.BoardDaoException;
 import himedia.myportal.mappers.BoardMapper;
 import himedia.myportal.repositories.vo.BoardVo;
 
+//	SqlSession -> BoardMapper로 변경
 @Repository
 public class BoardDaoImpl implements BoardDao {
 //	@Autowired 

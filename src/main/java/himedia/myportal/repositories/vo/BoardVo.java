@@ -11,6 +11,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+//	BoardVo를 Lombok 버전으로 변경
 public class BoardVo {
 	private Integer no;
 	private String title;

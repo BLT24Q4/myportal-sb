@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import himedia.myportal.repositories.vo.BoardVo;
 
+//	mappers/board.xml에 정의된 쿼리 객체와 메서드 1:1 매핑
 @Mapper
 public interface BoardMapper {
 //	<select id="selectAll"
