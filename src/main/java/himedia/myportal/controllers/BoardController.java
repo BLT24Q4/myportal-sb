@@ -27,7 +27,7 @@ public class BoardController {
 	@Autowired
 	private BoardService boardServiceImpl;
 	
-	@RequestMapping({"", "/", "/list"})
+	@GetMapping({"", "/", "/list"})
 	public String list(Model model) {
 		List<BoardVo> list = 
 				boardServiceImpl.getList();
