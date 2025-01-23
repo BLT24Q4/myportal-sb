@@ -84,7 +84,7 @@ public class BoardController {
 	
 	@GetMapping("/{no}/modify")
 	public String modifyForm(
-		@PathVariable("no") Integer no,
+		@PathVariable Integer no,
 		Model model, 
 		HttpSession session) {
 		/*
